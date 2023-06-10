@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancestor" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ADD8FF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.hung.windowfactories.fxml.ManagerPageController">
+   <AnchorPane prefHeight="1000.0" prefWidth="250.0" style="-fx-background-color: #235A9F; -fx-background-radius: 0.5em;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefWidth="50.0" style="-fx-background-color: #174276; -fx-background-radius: 0.5em;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.1473684161901474" green="0.13972710072994232" blue="0.13972710072994232" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutY="100.0" onMousePressed="#setProductButton" onMouseReleased="#setProductButton" prefHeight="50.0" ripplerFill="#c92e86" text="Product" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../icons/product.png" />
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label prefHeight="50.0" prefWidth="250.0" text="Manager View" textFill="#ff9c99" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets left="60.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="settingButton" layoutX="43.0" layoutY="520.0" prefHeight="50.0" prefWidth="50.0" text=" " AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" />
+      <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutX="10.0" layoutY="110.0" onMouseClicked="#setCategoryButton" onMousePressed="#setCategoryButton" onMouseReleased="#setCategoryButton" ripplerFill="#c92e86" text="Category" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../icons/category.png" />
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutX="20.0" layoutY="120.0" onMouseClicked="#setPublisherButton" onMousePressed="#setPublisherButton" onMouseReleased="#setPublisherButton" prefHeight="50.0" ripplerFill="#c92e86" text="Publisher" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../icons/publisher.png" />
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="BASELINE_LEFT" graphicTextGap="60.0" layoutX="20.0" layoutY="120.0" onMouseClicked="#setPersonButton" onMousePressed="#setPersonButton" onMouseReleased="#setPersonButton" prefHeight="50.0" ripplerFill="#c92e86" text="Person" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../icons/person.png" />
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </AnchorPane>
+   <AnchorPane layoutX="300.0" layoutY="-45.0" prefHeight="100.0" prefWidth="750.0" style="-fx-background-color: #47B5FF; -fx-background-radius: 0.5em;" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <ImageView fx:id="background" fitHeight="600.0" fitWidth="750.0" pickOnBounds="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <image>
+         <Image url="@../background/background.gif" />
+      </image>
+   </ImageView>
+   <AnchorPane fx:id="showAnchorPane" layoutX="253.0" layoutY="100.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #ADD8FF; -fx-background-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="100.0">
+      <effect>
+         <InnerShadow />
+      </effect></AnchorPane>
+</AnchorPane>

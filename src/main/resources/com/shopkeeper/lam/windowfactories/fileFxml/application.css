@@ -1,0 +1,11 @@
+.anchor {
+    -fx-background-image:url('1182474.jpg');
+    -fx-background-size: 100% 100%;
+     -fx-background-border-color: black;
+
+}
+.mobius {
+    -fx-background-image:url('Mobius.full.3442450.jpg');
+    -fx-background-size: 100% 100%;
+    -fx-background-border-color: black;
+}

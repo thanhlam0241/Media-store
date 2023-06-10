@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainContainer" prefHeight="640.0" prefWidth="900.0" stylesheets="@general-styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.linh.windowfactories.CustomerManagerWindowController">
+    <BorderPane prefHeight="640.0" prefWidth="900.0">
+        <left>
+            <ListView fx:id="customerListView" prefHeight="200.0" prefWidth="450.0" BorderPane.alignment="CENTER" />
+        </left>
+        <top>
+            <VBox BorderPane.alignment="CENTER">
+                <children>
+                    <GridPane fx:id="filterPanel" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 6, 0, 0, 0); -fx-background-color: e9e9e9; -fx-view-order: 1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="250.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" percentHeight="0.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                                <children>
+                           <TextField fx:id="filterLocationTxt" prefWidth="490.0" promptText="Nhập địa chỉ">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </TextField>
+                                </children>
+                                <GridPane.margin>
+                                    <Insets bottom="15.0" />
+                                </GridPane.margin>
+                            </HBox>
+                            <VBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #4d4d4d;" GridPane.columnSpan="4">
+                                <children>
+                                    <Label text="Bộ lọc" textFill="WHITE">
+                                        <VBox.margin>
+                                            <Insets left="20.0" />
+                                        </VBox.margin>
+                                        <font>
+                                            <Font size="16.0" />
+                                        </font>
+                                    </Label>
+                                </children>
+                                <GridPane.margin>
+                                    <Insets left="-20.0" right="-20.0" />
+                                </GridPane.margin>
+                            </VBox>
+                            <HBox prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                <children>
+                                    <Button mnemonicParsing="false" onAction="#filterList" onMouseClicked="#filterList" prefWidth="72.0" text="OK">
+                                        <graphic>
+                                            <Text fill="#0bd140" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;;" text="" />
+                                        </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#resetFilterPanel" onMouseClicked="#resetFilterPanel" prefWidth="72.0" text="Đặt lại">
+                                        <HBox.margin>
+                                            <Insets left="8.0" />
+                                        </HBox.margin>
+                                        <graphic>
+                                            <Text fill="#25a7f7" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;;" text="" />
+                                        </graphic>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#closeFilterPanel" onMouseClicked="#closeFilterPanel" prefWidth="72.0" text="Đóng">
+                                        <HBox.margin>
+                                            <Insets left="8.0" />
+                                        </HBox.margin>
+                                        <graphic>
+                                            <Text fill="#d72828" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;;" text="" />
+                                        </graphic>
+                                    </Button>
+                                </children>
+                                <padding>
+                                    <Insets top="3.0" />
+                                </padding>
+                                <GridPane.margin>
+                                    <Insets />
+                                </GridPane.margin>
+                            </HBox>
+                     <HBox alignment="CENTER_LEFT" GridPane.columnSpan="4" GridPane.rowIndex="1">
+                        <children>
+                                    <TextField fx:id="filterSubnameTxtBox" prefWidth="490.0" promptText="Tên của khách hàng cần tìm">
+                                        <font>
+                                            <Font size="14.0" />
+                                        </font>
+                                    </TextField>
+                           <Label text="Số điện thoại:">
+                              <HBox.margin>
+                                 <Insets left="22.0" right="5.0" />
+                              </HBox.margin>
+                           </Label>
+                           <TextField fx:id="filterPhoneNumberTxt" prefWidth="250.0" promptText="0xxxxxxxxx/84xxxxxxxxx">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                        <padding>
+                           <Insets bottom="7.0" top="15.0" />
+                        </padding>
+                     </HBox>
+                        </children>
+                        <padding>
+                            <Insets left="20.0" right="20.0" />
+                        </padding>
+                    </GridPane>
+                    <BorderPane style="-fx-background-color: #e6e6e6; -fx-view-order: 333; -fx-border-width: 0 0 1 0; -fx-border-color: #989898;">
+                        <left>
+
+                            <HBox alignment="CENTER_LEFT" prefHeight="44.0" style="-fx-background-color: #e6e6e6; -fx-view-order: 333; -fx-border-width: 0 0 1 0; -fx-border-color: #989898;" BorderPane.alignment="CENTER">
+                                <children>
+                           <Button mnemonicParsing="false" onAction="#createNewCustomer" text="Khách hàng mới">
+                              <graphic>
+                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-family: &quot;Material Icons&quot;;" text="" />
+                              </graphic>
+                              <HBox.margin>
+                                 <Insets right="5.0" />
+                              </HBox.margin>
+                           </Button>
+                                    <Label text="Sắp xếp theo: ">
+                                        <graphic>
+                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;; -fx-font-size: 18px;" text="">
+                                                <font>
+                                                    <Font size="18.0" />
+                                                </font>
+                                            </Text>
+                                        </graphic>
+                                    </Label>
+                                    <ComboBox fx:id="orderCombobox" prefWidth="150.0">
+                                        <HBox.margin>
+                                            <Insets right="10.0" />
+                                        </HBox.margin>
+                                    </ComboBox>
+                                    <Button mnemonicParsing="false" onAction="#openFilterPanel" text="Tìm kiếm/Lọc">
+                                        <graphic>
+                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;;" text="" />
+                                        </graphic>
+                                    </Button>
+                                </children>
+                                <padding>
+                                    <Insets left="20.0" />
+                                </padding>
+                            </HBox>
+                        </left>
+                        <center>
+                            <HBox fx:id="customerToolbar" alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+                                <children>
+                           <Button mnemonicParsing="false" onAction="#deleteCustomer" text="Xóa thông tin">
+                              <graphic>
+                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;; -fx-font-size: 16;" text="" />
+                              </graphic>
+                              <HBox.margin>
+                                 <Insets right="8.0" />
+                              </HBox.margin>
+                           </Button>
+                           <Button mnemonicParsing="false" onAction="#editCustomer" text="Sửa đổi thông tin">
+                              <graphic>
+                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-family: &quot;Material Icons&quot;;" text="" />
+                              </graphic>
+                           </Button>
+                                </children>
+                                <padding>
+                                    <Insets right="20.0" />
+                                </padding>
+                            </HBox>
+                        </center></BorderPane>
+                </children>
+            </VBox>
+        </top>
+        <center>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-view-order: 9999;" BorderPane.alignment="CENTER">
+                <content>
+                    <AnchorPane>
+                        <children>
+                            <VBox fx:id="customerDisplayer" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <padding>
+                                    <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                                </padding>
+                                <children>
+                                    <AnchorPane prefWidth="386.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: gray;">
+                                        <children>
+                                            <Text fx:id="customerHeaderDisplayer" strokeType="OUTSIDE" strokeWidth="0.0" text="Nước rửa chân: Gây nẻ da tay" wrappingWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.8000000000000114" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <font>
+                                                    <Font size="20.0" />
+                                                </font>
+                                            </Text>
+                                        </children>
+                                        <padding>
+                                            <Insets bottom="6.0" />
+                                        </padding>
+                                    </AnchorPane>
+                           <HBox>
+                              <children>
+                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SĐT:">
+                                    <font>
+                                       <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                       <Insets right="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                                          <Text fx:id="customerPhoneNumberDisplayer" strokeType="OUTSIDE" strokeWidth="0.0" text="Về: Sản phẩm mã 58695321" wrappingWidth="386.0">
+                                              <font>
+                                                  <Font name="System Italic" size="16.0" />
+                                              </font>
+                                    <HBox.margin>
+                                       <Insets />
+                                    </HBox.margin>
+                                          </Text>
+                              </children>
+                              <VBox.margin>
+                                 <Insets top="8.0" />
+                              </VBox.margin>
+                           </HBox>
+                           <HBox>
+                              <children>
+                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ:">
+                                    <font>
+                                       <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                       <Insets right="5.0" />
+                                    </HBox.margin>
+                                 </Text>
+                                          <Text fx:id="customerLocationDisplayer" strokeType="OUTSIDE" strokeWidth="0.0" text="Sản phẩm này tệ vl, tệ nhất mà tôi từng mua luôn, éo hiểu kiểu j thật là kì cục, haizzzzzzzzzz, buồn não lòng hmu hmu" wrappingWidth="346.0">
+                                              <font>
+                                                  <Font size="16.0" />
+                                              </font>
+                                          </Text>
+                              </children>
+                              <padding>
+                                 <Insets top="7.0" />
+                              </padding>
+                           </HBox>
+                                </children>
+                            </VBox>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </ScrollPane>
+        </center>
+    </BorderPane>
+</AnchorPane>

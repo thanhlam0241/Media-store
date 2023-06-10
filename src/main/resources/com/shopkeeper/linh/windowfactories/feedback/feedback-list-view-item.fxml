@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="68.0" prefWidth="420.0" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0; -fx-border-style: dashed inside;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.linh.windowfactories.feedback.FeedbackListViewItemController">
+   <left>
+      <Text fx:id="timeTxt" fill="#484848" strokeType="OUTSIDE" strokeWidth="0.0" text="24/04/2022" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets left="16.0" top="3.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Text>
+   </left>
+   <center>
+      <HBox alignment="TOP_RIGHT" maxHeight="25.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <AnchorPane style="-fx-border-radius: 3; -fx-background-color: #474747; -fx-background-radius: 3;">
+               <children>
+                  <Text fx:id="aboutTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sản phẩm" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <AnchorPane style="-fx-border-radius: 3; -fx-background-color: #474747; -fx-background-radius: 3;">
+               <children>
+                  <Text fx:id="typeTxt" fill="#ff4d4d" strokeType="OUTSIDE" strokeWidth="0.0" text="Tích cực" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </AnchorPane>
+            <AnchorPane style="-fx-border-radius: 3; -fx-background-color: #474747; -fx-background-radius: 3;">
+               <children>
+                  <Text fx:id="beUsefulTxt" fill="#cfcfcf" strokeType="OUTSIDE" strokeWidth="0.0" text="Hữu ích" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="16.0" />
+               </HBox.margin>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <HBox maxWidth="420.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="titleTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Title of feedbackyy yy x xxx x xxx xxx xxx xx xxx...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="readMark" fill="#5e5e5e" strokeType="OUTSIDE" strokeWidth="0.0" text="(đã đọc)">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="4.0" left="16.0" top="6.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+</BorderPane>

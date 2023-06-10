@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="420.0" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0; -fx-border-style: dashed inside;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.linh.windowfactories.payment.SaleBillListItemController">
+   <center>
+        <HBox alignment="TOP_RIGHT" maxHeight="25.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane style="-fx-border-radius: 3; -fx-background-color: #474747; -fx-background-radius: 3;">
+                    <children>
+                        <Text fx:id="priceTxt" fill="#f5ab6e" strokeType="OUTSIDE" strokeWidth="0.0" text="1000000000 VND" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                    </children>
+                    <padding>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="3.0" />
+                    </padding>
+                    <HBox.margin>
+                        <Insets right="16.0" />
+                    </HBox.margin>
+                </AnchorPane>
+            </children>
+        </HBox>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+                <Text fx:id="titleTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Title of feedbackyy yy x xxx x xxx xxx xxx xx xxx...">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="16.0" top="6.0" />
+               </VBox.margin>
+                </Text>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Text fill="#464646" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16; -fx-font-family: &quot;Material Icons&quot;;" text="">
+                     <HBox.margin>
+                        <Insets right="6.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="customerTxt" fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="Linh đẹp trxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="16.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Text fill="#464646" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;; -fx-font-size: 16;" text="">
+                     <HBox.margin>
+                        <Insets right="6.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="locationTxt" fill="#383838" strokeType="OUTSIDE" strokeWidth="0.0" text="xã XX huyện YY tỉnh ZZ">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="16.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#464646" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;; -fx-font-size: 16;" text="">
+               <HBox.margin>
+                  <Insets right="6.0" />
+               </HBox.margin>
+            </Text>
+              <Text fx:id="timeTxt" fill="#484848" strokeType="OUTSIDE" strokeWidth="0.0" text="24/04/2022">
+                  <font>
+                      <Font name="System Italic" size="14.0" />
+                  </font>
+              </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="16.0" />
+         </padding>
+      </HBox>
+   </left>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancestor" prefHeight="200.0" prefWidth="150.0" style="-fx-background-radius: 1.0em; -fx-background-color: #FFFFFF; -fx-border-radius: 1em;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.hung.windowfactories.fxml.ProductBriefInfoPage">
+   <effect>
+      <DropShadow />
+   </effect>
+   <ImageView fx:id="icon" fitHeight="145.0" fitWidth="150.0" layoutX="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <Image url="@../icons/book-icon.png" />
+   </ImageView>
+   <Label fx:id="title" alignment="CENTER" graphicTextGap="0.0" layoutX="35.0" layoutY="125.0" prefHeight="25.0" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+      <font>
+         <Font name="Times New Roman Italic" size="16.0" />
+      </font>
+   </Label>
+   <Label fx:id="price" alignment="CENTER" graphicTextGap="0.0" prefHeight="25.0" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="172.0">
+      <font>
+         <Font name="Times New Roman Italic" size="16.0" />
+      </font>
+   </Label>
+   <JFXButton fx:id="button" onMouseEntered="#setBrightText" onMouseExited="#setNormalText" onMouseReleased="#setDetailPage" ripplerFill="#2dbca9" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </JFXButton>
+</AnchorPane>

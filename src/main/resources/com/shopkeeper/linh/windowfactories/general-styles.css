@@ -1,0 +1,10 @@
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./MaterialIcons-Regular.ttf) format('truetype');
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}

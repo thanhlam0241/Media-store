@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancestor" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;"
+            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.shopkeeper.hung.windowfactories.fxml.ProductDetailPage">
+   <JFXButton fx:id="closeButton" layoutX="484.0" layoutY="31.0" onMouseEntered="#setRedCloseButton"
+              onMouseExited="#setNormalCloseButton" onMouseReleased="#close" prefHeight="50.0" prefWidth="50.0"
+              ripplerFill="#ea0909b8" style="-fx-background-radius: 10;" textFill="#8c1515b6"
+              AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <font>
+         <Font name="Times New Roman Bold" size="16.0"/>
+      </font>
+      <graphic>
+         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/close.png"/>
+         </ImageView>
+      </graphic>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+   </JFXButton>
+   <JFXButton fx:id="editButton" layoutX="275.0" layoutY="47.0" onMouseReleased="#setEditButton" prefHeight="60.0"
+              prefWidth="150.0" ripplerFill="#058fa4b8" text="Edit" textFill="#8c1515b6" AnchorPane.leftAnchor="10.0"
+              AnchorPane.topAnchor="10.0">
+      <font>
+         <Font name="Times New Roman Bold" size="16.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+      <graphic>
+         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/edit.png"/>
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <JFXButton fx:id="deleteButton" layoutX="462.0" layoutY="99.0" onMouseReleased="#setDeleteButton" prefHeight="60.0"
+              prefWidth="150.0" ripplerFill="#058fa4b8" text="Delete" textFill="#8c1515b6" AnchorPane.leftAnchor="170.0"
+              AnchorPane.topAnchor="10.0">
+      <font>
+         <Font name="Times New Roman Bold" size="16.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+      <graphic>
+         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/delete.png"/>
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <AnchorPane layoutY="70.0" prefHeight="430.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane prefHeight="430.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <ImageView fx:id="icon" fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true"
+                    AnchorPane.topAnchor="5.0">
+            <effect>
+               <Reflection fraction="0.32" topOpacity="0.28"/>
+            </effect>
+            <Image url="@../icons/book-icon.png"/>
+         </ImageView>
+         <Label fx:id="name" alignment="CENTER" graphicTextGap="0.0" prefWidth="150.0"
+                style="-fx-background-radius: 5; -fx-background-color: #F0F8FF;" text="Name:" textFill="#235b8c"
+                wrapText="true" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.topAnchor="220.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0"/>
+            </font>
+         </Label>
+         <Label fx:id="rating" alignment="CENTER" graphicTextGap="0.0" minHeight="20.0" prefWidth="150.0"
+                style="-fx-background-radius: 5; -fx-background-color: #F0F8FF;" text="Rating: "
+                textFill="#235b8c" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0"/>
+            </font>
+         </Label>
+      </AnchorPane>
+      <AnchorPane layoutX="202.0" layoutY="56.0" prefHeight="430.0" prefWidth="280.0" AnchorPane.leftAnchor="170.0"
+                  AnchorPane.topAnchor="0.0">
+         <Label prefHeight="20.0" prefWidth="110.0" text="Category:" textFill="#235b8c"
+                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label fx:id="category" prefHeight="20.0" textFill="#235b8c" AnchorPane.leftAnchor="110.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+            <font>
+               <Font name="Times New Roman Italic" size="18.0"/>
+            </font>
+         </Label>
+         <Label prefHeight="20.0" text="Description:" textFill="#235b8c" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label fx:id="description" alignment="TOP_LEFT" prefHeight="200.0"
+                style="-fx-background-color: #F0F8FF; -fx-background-radius: 5;" text="des" textFill="#235b8c"
+                wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="45.0">
+            <font>
+               <Font name="Times New Roman Italic" size="16.0"/>
+            </font>
+         </Label>
+         <Label prefHeight="20.0" text="Award:" textFill="#235b8c" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+            <font>
+               <Font name="Times New Roman Italic" size="18.0"/>
+            </font>
+         </Label>
+         <Label fx:id="award" alignment="TOP_LEFT"
+                style="-fx-background-color: #F0F8FF; -fx-background-radius: 5;" text="Label" textFill="#235b8c"
+                wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="270.0">
+            <font>
+               <Font name="Times New Roman Italic" size="16.0"/>
+            </font>
+         </Label>
+      </AnchorPane>
+      <AnchorPane layoutX="487.0" layoutY="76.0" prefHeight="430.0" prefWidth="280.0" AnchorPane.leftAnchor="460.0"
+                  AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <Label prefHeight="20.0" prefWidth="110.0" text="Price:" textFill="#235b8c" AnchorPane.leftAnchor="0.0"
+                AnchorPane.topAnchor="5.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label fx:id="price" text="Label" textFill="#235b8c" AnchorPane.leftAnchor="110.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label layoutY="65.0" prefHeight="20.0" prefWidth="110.0" text="Publisher:" textFill="#235b8c"
+                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label fx:id="publisher" layoutX="110.0" layoutY="65.0" text="Label" textFill="#235b8c"
+                AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label prefHeight="20.0" prefWidth="110.0" text="Release Date:" textFill="#235b8c"
+                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <Label fx:id="date" text="Label" textFill="#235b8c" AnchorPane.leftAnchor="110.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <font>
+               <Font name="Times New Roman" size="18.0"/>
+            </font>
+         </Label>
+         <AnchorPane fx:id="showBookAnchorPane" layoutX="-5.0" layoutY="184.0" prefHeight="200.0"
+                     prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0"
+                     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <Label prefHeight="20.0" prefWidth="110.0" text="Page number: " textFill="#235b8c"
+                   AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="pageNumber" prefWidth="180.0" text="Label" textFill="#235b8c"
+                   AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="110.0" text="Authors:" textFill="#235b8c"
+                   AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="authors" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefWidth="180.0"
+                   text="Label" textFill="#235b8c" wrapText="true" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+         </AnchorPane>
+         <AnchorPane fx:id="showMusicAnchorPane" prefHeight="200.0" prefWidth="200.0"
+                     style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0"
+                     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <Label prefHeight="20.0" prefWidth="110.0" text="Time:" textFill="#235b8c"
+                   AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="timeMusic" prefWidth="180.0" text="Label" textFill="#235b8c"
+                   AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="110.0" text="Musicians:" textFill="#235b8c"
+                   AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="musicians" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefWidth="180.0"
+                   text="Label" textFill="#235b8c" wrapText="true" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+         </AnchorPane>
+         <AnchorPane fx:id="showFilmAnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0"
+                     style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0"
+                     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <Label prefHeight="20.0" prefWidth="110.0" text="Time:" textFill="#235b8c"
+                   AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="timeFilm" prefWidth="180.0" text="Label" textFill="#235b8c"
+                   AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="110.0" text="Director:" textFill="#235b8c"
+                   AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="director" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="130.0"
+                   prefWidth="0.0" text="Label" textFill="#235b8c" wrapText="true"
+                   AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label fx:id="actors" alignment="TOP_LEFT" layoutX="20.0" layoutY="20.0" prefHeight="120.0"
+                   prefWidth="180.0" text="Label" textFill="#235b8c" wrapText="true"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="210.0" prefHeight="20.0" prefWidth="110.0" text="Actors:"
+                   textFill="#235b8c" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0"/>
+               </font>
+            </Label>
+         </AnchorPane>
+      </AnchorPane>
+      <Label fx:id="left" alignment="CENTER" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" minHeight="20.0"
+             prefWidth="150.0" style="-fx-background-radius: 5; -fx-background-color: #F0F8FF;" text="Rating: "
+             textFill="#235b8c" AnchorPane.bottomAnchor="40.0">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0"/>
+         </font>
+      </Label>
+   </AnchorPane>
+</AnchorPane>

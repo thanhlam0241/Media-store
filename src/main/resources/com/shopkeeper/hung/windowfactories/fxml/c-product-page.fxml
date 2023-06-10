@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancestor" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.hung.windowfactories.fxml.CustomerProductPage">
+   <TextField fx:id="searchName" layoutX="27.0" layoutY="23.0" prefHeight="30.0" prefWidth="250.0" promptText="Name" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="325.0" AnchorPane.topAnchor="10.0">
+      <font>
+         <Font name="Times New Roman" size="16.0" />
+      </font>
+      <effect>
+         <Reflection />
+      </effect>
+   </TextField>
+   <JFXButton layoutX="210.0" layoutY="15.0" onMouseReleased="#searchByTitle" prefHeight="40.0" prefWidth="40.0" text=" " AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="5.0">
+      <graphic>
+         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/search.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <MenuButton layoutX="314.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Sort by" textFill="#1c87b9" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="10.0">
+      <graphic>
+         <ImageView fitHeight="30.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/sort.png" />
+         </ImageView>
+      </graphic>
+      <font>
+         <Font name="Times New Roman" size="12.0" />
+      </font>
+      <items>
+         <MenuItem mnemonicParsing="false">
+            <graphic>
+               <JFXButton onMouseClicked="#sortByDate" onMousePressed="#sortByDate" onMouseReleased="#sortByDate" prefWidth="80.0" ripplerFill="#278ec1" text="Date" textFill="#1c87b9">
+                  <font>
+                     <Font name="Times New Roman" size="16.0" />
+                  </font>
+               </JFXButton>
+            </graphic>
+         </MenuItem>
+         <SeparatorMenuItem mnemonicParsing="false" />
+         <MenuItem mnemonicParsing="false">
+            <graphic>
+               <JFXButton onMouseDragReleased="#sortByPrice" onMousePressed="#sortByPrice" prefWidth="80.0" ripplerFill="#278ec1" text="Price" textFill="#1c87b9">
+                  <font>
+                     <Font name="Times New Roman" size="16.0" />
+                  </font>
+               </JFXButton>
+            </graphic>
+         </MenuItem>
+         <SeparatorMenuItem mnemonicParsing="false" />
+         <MenuItem mnemonicParsing="false">
+            <graphic>
+               <JFXButton onMousePressed="#sortByName" onMouseReleased="#sortByName" prefWidth="80.0" ripplerFill="#278ec1" text="Name" textFill="#1c87b9">
+                  <font>
+                     <Font name="Times New Roman" size="16.0" />
+                  </font>
+               </JFXButton>
+            </graphic>
+         </MenuItem>
+         <SeparatorMenuItem mnemonicParsing="false" />
+         <MenuItem mnemonicParsing="false">
+            <graphic>
+               <JFXButton onMousePressed="#sortByRating" onMouseReleased="#sortByRating" prefWidth="80.0" ripplerFill="#278ec1" text="Rating" textFill="#1c87b9">
+                  <font>
+                     <Font name="Times New Roman" size="16.0" />
+                  </font>
+               </JFXButton>
+            </graphic>
+         </MenuItem>
+      </items>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <DatePicker fx:id="fromDate" layoutX="427.0" layoutY="13.0" prefWidth="100.0" promptText="From" AnchorPane.rightAnchor="10.0" />
+   <DatePicker fx:id="toDate" layoutX="428.0" layoutY="49.0" prefWidth="100.0" promptText="To" AnchorPane.rightAnchor="10.0" />
+   <Label layoutX="428.0" layoutY="17.0" prefHeight="25.0" prefWidth="45.0" text="From:" textFill="#1c87b9" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="15.0">
+      <font>
+         <Font name="Times New Roman" size="16.0" />
+      </font>
+   </Label>
+   <Label layoutX="425.0" layoutY="47.0" prefHeight="25.0" prefWidth="45.0" text="To:" textFill="#1c87b9" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="50.0">
+      <font>
+         <Font name="Times New Roman" size="16.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="categoryComboBox" layoutX="20.0" layoutY="50.0" prefHeight="40.0" prefWidth="100.0" promptText="Category" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="50.0">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ComboBox>
+   <ComboBox fx:id="publisherComboBox" layoutX="30.0" layoutY="60.0" prefHeight="40.0" prefWidth="100.0" promptText="Publisher" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="50.0">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ComboBox>
+   <ComboBox fx:id="personComboBox" layoutX="128.0" layoutY="60.0" prefHeight="40.0" prefWidth="100.0" promptText="Person" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="50.0">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ComboBox>
+   <AnchorPane layoutY="94.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="94.0">
+      <Pagination fx:id="pagination" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+   </AnchorPane>
+   <AnchorPane layoutX="10.0" layoutY="197.0" prefHeight="200.0" prefWidth="250.0" style="-fx-background-radius: 10; -fx-background-color: #D7E5F0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <effect>
+         <DropShadow />
+      </effect>
+      <ImageView fitHeight="150.0" fitWidth="220.0" layoutX="14.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #023020; -fx-background-radius: 20;" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <Label fx:id="nameLabel" alignment="CENTER" layoutX="20.0" layoutY="26.0" prefHeight="50.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+         <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="5.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+         <Label fx:id="priceLabel" alignment="CENTER" layoutX="-31.0" layoutY="222.0" prefHeight="30.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="ratingLabel" alignment="CENTER" layoutX="-21.0" layoutY="232.0" prefHeight="30.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="dateLabel" alignment="CENTER" layoutX="-11.0" layoutY="242.0" prefHeight="30.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+      <Label layoutX="4.0" layoutY="409.0" prefHeight="30.0" prefWidth="80.0" text="Amount:" textAlignment="CENTER" textFill="#7b1616" wrapText="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="405.0">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberTextField" alignment="CENTER" layoutX="104.0" layoutY="407.0" prefWidth="45.0" style="-fx-border-color: #7b1616; -fx-background-color: transparent; -fx-border-radius: 10;" text="1" AnchorPane.leftAnchor="150.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <JFXButton onMousePressed="#setCartFunction" prefHeight="50.0" prefWidth="150.0" ripplerFill="#235b8c" style="-fx-background-color: #FFA500; -fx-background-radius: 20;" text="+ Add to cart" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="445.0">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </AnchorPane>
+   <Separator layoutX="257.0" layoutY="13.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="265.0" AnchorPane.topAnchor="0.0" />
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

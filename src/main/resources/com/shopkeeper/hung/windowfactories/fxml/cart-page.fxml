@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancestor" opacity="0.9" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.hung.windowfactories.fxml.CartPage">
+   <JFXButton graphicTextGap="20.0" layoutX="224.0" layoutY="8.0" onMousePressed="#setPayFunction" prefHeight="50.0" prefWidth="150.0" ripplerFill="#235b8c" style="-fx-background-color: #FFA500; -fx-background-radius: 20;" text="Pay" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="8.0">
+      <font>
+         <Font name="Times New Roman Bold" size="20.0" />
+      </font>
+      <graphic>
+         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/pay.png" />
+         </ImageView>
+      </graphic>
+   </JFXButton>
+   <ScrollPane layoutX="22.0" layoutY="50.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
+      <ListView fx:id="boughtProducts" prefHeight="463.0" prefWidth="450.0" style="-fx-background-color: transparent;" />
+   </ScrollPane>
+   <AnchorPane prefWidth="290.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <JFXButton onMousePressed="#setRemoveFunction" prefHeight="50.0" prefWidth="150.0" ripplerFill="#235b8c" style="-fx-background-color: #FFA500; -fx-background-radius: 20;" text="Remove" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="60.0">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../icons/remove.png" />
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #023020; -fx-background-radius: 20;" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="80.0">
+         <Label fx:id="nameLabel" alignment="CENTER" layoutX="20.0" layoutY="26.0" prefHeight="50.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+         <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="5.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+         <Label fx:id="priceLabel" alignment="CENTER" layoutX="-31.0" layoutY="222.0" prefHeight="30.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="ratingLabel" alignment="CENTER" layoutX="-21.0" layoutY="232.0" prefHeight="30.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+         <Label fx:id="dateLabel" alignment="CENTER" layoutX="-11.0" layoutY="242.0" prefHeight="30.0" prefWidth="170.0" text=" " textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
+            <font>
+               <Font name="Times New Roman Italic" size="20.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+      <Label layoutX="52.0" layoutY="394.0" prefHeight="30.0" prefWidth="80.0" text="Amount:" textAlignment="CENTER" textFill="#7b1616" wrapText="true" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="395.0">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberLabel" alignment="CENTER" layoutX="62.0" layoutY="404.0" prefHeight="30.0" prefWidth="50.0" style="-fx-border-color: #7b1616; -fx-border-radius: 10;" text="0" textAlignment="CENTER" textFill="#7b1616" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="395.0">
+         <font>
+            <Font name="Times New Roman Italic" size="20.0" />
+         </font>
+      </Label>
+      <effect>
+         <DropShadow />
+      </effect>
+   </AnchorPane>
+   <Label layoutX="62.0" layoutY="404.0" prefHeight="30.0" prefWidth="80.0" text="Product" textAlignment="CENTER" textFill="#7b1616" wrapText="true" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="60.0">
+      <font>
+         <Font name="Times New Roman Italic" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="72.0" layoutY="414.0" text="Amount" textAlignment="CENTER" textFill="#7b1616" wrapText="true" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="60.0">
+      <font>
+         <Font name="Times New Roman Italic" size="20.0" />
+      </font>
+   </Label>
+   <Separator layoutX="529.0" layoutY="-50.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #FF6347;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="540.0" AnchorPane.topAnchor="100.0">
+      <effect>
+         <DropShadow />
+      </effect>
+   </Separator>
+   <AnchorPane layoutX="440.0" layoutY="22.0" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

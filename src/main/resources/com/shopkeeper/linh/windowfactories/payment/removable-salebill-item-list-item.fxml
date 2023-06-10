@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="container" prefWidth="404.0" style="-fx-border-style: dashed inside; -fx-border-width: 0 0 0 0; -fx-border-color: gray;" stylesheets="@../general-styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shopkeeper.linh.windowfactories.payment.RemovableSaleBillItemListCellController">
+   <children>
+      <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox GridPane.columnSpan="4">
+               <children>
+                  <Text fx:id="productInfoNameTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Em cuar ngayf hoom qua t sdsdf df s df dsf sd f dsf ds f sd f d fd f sd f dsf d d f ds hat la perfect" wrappingWidth="354.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="pricePerProductTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="100.000" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="amountTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="15" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="3.0">
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <children>
+                  <Text fx:id="priceTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="100.500.000" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#remove" style="-fx-font-family: &quot;Material Icons&quot;;" GridPane.columnIndex="4">
+               <graphic>
+                  <Text strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: &quot;Material Icons&quot;; -fx-font-size: 16;" text="" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
